@@ -1,0 +1,26 @@
+name: InventoryKeeper
+main: ch.itship.minecraft.inventorykeeper.InventoryKeeper
+version: 0.0.1
+description: >
+             Lets you save and restore your inventory
+commands:
+  saveinventory:
+    description: Saves the actual inventory
+  resetinventory:
+    description: Saves the actual inventory and cleans it
+  restoreinventory:
+    description: Restores last saved inventory
+permissions:
+inventorykeeper.*:
+    description: Gives Access To All Commands
+    children:
+        inventorykeeper.player: true
+        inventorykeeper.admin: true
+inventorykeeper.player:
+    description: Allows Player Commands
+    default: false
+inventorykeeper.admin:
+    children:
+        inventorykeeper.player: true
+    description: Allows ALL Commands
+    default: op
