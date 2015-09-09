@@ -14,13 +14,30 @@ public class InventoryKeeper extends JavaPlugin implements Listener {
 
 	@Override
 	public void onEnable() {
-		getLogger().info("Enabled!");
-
+		super.onEnable();
+		configurePlugin();
+		configureCommands();
+		logger.info("Version " + getDescription().getVersion() + " enabled!");
 	}
 
 	@Override
 	public void onDisable() {
-		getLogger().info("Disabled!");
-
+		super.onDisable();
+		logger.info("Disabled!");
 	}
+
+	private void configurePlugin() {
+		saveDefaultConfig();
+		getConfig().options().copyDefaults(true);
+		saveConfig();
+		InventoryConfig.getInstance(this);
+	}
+
+	private void configureCommands() {
+		InventoryCommands commands = new InventoryCommands(this);
+		this.getCommand("saveinventory").setExecutor(commands);
+		this.getCommand("resetinventory").setExecutor(commands);
+		this.getCommand("restoreinventory").setExecutor(commands);
+	}
+
 }

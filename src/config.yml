@@ -5,3 +5,9 @@ AutoUpdate: true
 UpdateNotification: true
 ## If Set To True The Plugin Will Send Usage Information To mcstats.org, Such As Minecraft Version And Players Online
 Metrics: true
+## The number of seconds in between save operations will be blocked, so only every x seconds a save will happen
+TimeBetweenSaves: 10
+## If set to true, inventpory is only saved if it is not empty
+SaveOnlyIfNotEmtpy: true
+## Also save and restore players spawn location
+SaveSpawnLocation: true
