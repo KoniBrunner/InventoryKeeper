@@ -1,3 +1,10 @@
-target/
-dependency-reduced-pom.xml
-.settings/
+# Eclipse Stuff
+/.settings
+
+# IntelliJ IDEA Stuff
+/.idea
+/*.iml
+
+# Maven Stuff
+/target
+/dependency-reduced-pom.xml
