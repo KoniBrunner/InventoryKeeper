@@ -23,6 +23,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
+/**
+ * Helper utilities used in monecraft plugins
+ *
+ * @author Ardamedonner
+ * @version 1.0
+ */
+
 public class Utility {
 
 	public static String getLanguage(Player p) {
